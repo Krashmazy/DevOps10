@@ -23,7 +23,7 @@ pipeline {
         stage('Build Docker image') {
             steps {
                 script {
-                    def dockerImage = docker.build("${env.DOCKER_HUB_REPO}:${env.BUILD_NUMBER}")
+                    dockerImage = docker.build("${env.DOCKER_HUB_REPO}:${env.BUILD_NUMBER}")
                 }
             }
         }
